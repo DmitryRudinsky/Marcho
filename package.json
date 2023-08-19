@@ -1,0 +1,26 @@
+{
+  "name": "marcho",
+  "version": "1.0.0",
+  "description": "my sixth site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dimka",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin": "^8.0.1",
+    "jquery": "^3.7.0",
+    "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0"
+  }
+}
