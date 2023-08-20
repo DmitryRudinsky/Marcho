@@ -21,18 +21,18 @@
         padding-left: 35px;
     }
     &__list-link{
-        padding-bottom: 1px;
+        padding-bottom: 0 2px 1px;
         color: $title;
         transition: all .3s;
-        @extend %quicksand-400;
+        @extend %roboto-500;
         &:hover{
-            @extend %quicksand-500;
+            @extend %roboto-700;
             color: $accent;
             border-bottom: 1px solid $accent;
         }
     }
     &__list-link--active{
-        @extend %quicksand-500;
+        @extend %roboto-700;
         color: $accent;
         border-bottom: 1px solid $accent;
     }
