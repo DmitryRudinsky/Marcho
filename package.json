@@ -18,7 +18,8 @@
     "gulp-uglify": "^3.0.2",
     "imagemin": "^8.0.1",
     "jquery": "^3.7.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "gulp-imagemin": "^7.1.0"
