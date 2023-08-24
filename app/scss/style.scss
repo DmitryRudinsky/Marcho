@@ -387,7 +387,123 @@
     }
 }
 
+.products{
+    padding: 105px 0 120px;
+    text-align: center;
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 45px 30px;
+    }
+    &__link{
+        text-transform: uppercase;
+        color: $title;
+        display: inline-block;
+        border: 1px solid $accent;
+        padding: 14px 27px;
+        margin-top: 55px;
+    }
+}
 
+.products-item{
+    text-align: center;
+    max-width: 370px;
+    &__img-box{
+        margin-bottom: 25px;
+        position: relative;
+        height: 370px;
+        overflow: hidden;
+    }
+    &__link-box{
+        transition: all .3s;
+        width: 220px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        background-color: #fff;
+        margin: 0 auto;
+        border-radius: 22px;
+        box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(300%);
+    }
+
+    &__link--line::before,
+    &__link--line::after{
+        content: '';
+        background-color: #ececec;
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+    }
+
+    &__link--line::before{
+        left: 70px;
+    }
+
+    &__link--line::after{
+        right: 70px;
+    }
+    
+    &__link{
+        display: inherit;
+        path{
+            transition: all .3s;
+        }
+    }
+
+    &__link:hover{
+        path{
+            fill: $accent;
+        }
+    }
+    &__images{
+        object-fit: cover;
+    }
+    &:hover{
+        .products-item__link-box{
+            transform: translateY(0);
+        }
+    }
+    &__title{
+        color: $title;
+        font-size: 22px;
+        padding: 15px 0 20px;
+    }
+    &__price{
+        display: flex;
+        justify-content: center;
+        @extend %roboto-400;
+    }
+    &__new-price{
+        padding: 0 12px;
+        color: $title;
+    }
+    &__old-price{
+        padding: 0 12px;
+        text-decoration: line-through
+    }   
+    &--sale{
+        .products-item__img-box::before{
+            content: "SALE";
+            @extend %btn;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            line-height: 1
+        }
+    }
+}
+
+.star{
+    margin: 0 auto;
+}
   
 @import 'media'; 
 
