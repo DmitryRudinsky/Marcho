@@ -28,3 +28,12 @@ $bg: #f6f6f6;
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
 }
+
+%btn{
+    padding: 12px 26px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $accent;
+    @extend %roboto-400;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+}

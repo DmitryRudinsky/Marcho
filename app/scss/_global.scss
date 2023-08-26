@@ -28,3 +28,62 @@ a{
     line-height: 26px;
     @extend %quicksand-500;
 }
+
+.title{
+    text-align: center;
+    @extend %roboto-700;
+    font-size: 48px;
+    line-height: 65px;
+    color: $title;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.text{
+    text-align: center;
+    max-width: 571px;
+    margin: 0 auto 55px;
+}
+
+.breadcrumbs{
+    display: inline-flex;
+    justify-content: center;
+    padding-left: 25px;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url(../images/icons/home_icon.svg);
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 4px;
+    }
+    &__list{
+        display: flex;
+    }
+    &__item{
+        color: #727272;
+        padding-right: 40px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url(../images/icons/angle_right.svg);
+            width: 9px;
+            height: 10px;
+            right: 15px;
+            top: 9px;
+        }
+        &:last-child{
+            color: $accent;
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &__link{
+        color: inherit;
+    }
+}
