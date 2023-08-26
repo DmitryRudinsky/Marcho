@@ -159,6 +159,18 @@
     }
 }
 
+.top{
+    &__container{
+        max-width: 1700px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        padding: 120px 0 130px;
+        text-align: center;
+    }
+}
+
 .top-slider{
    background-image: url(../images/slider/top-slider-bg.png);
    background-repeat: no-repeat;
@@ -652,6 +664,55 @@
         position: absolute;
         top: 8px;
         right: -14px;
+    }
+}
+
+.modal{
+    max-width: 570px;
+    margin: 0 auto 115px;
+    padding-top: 100px;
+    &__links{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__link{
+        color: #909090;
+        font-size: 22px;
+        @extend %roboto-400;
+        text-transform: uppercase;
+        margin: 0 30px;
+        &--active{
+            color: $accent;
+        }
+    }
+    &__label{
+        margin-bottom: 30px;
+        display: block;
+    }
+    &__input{
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: $bg;
+        margin-top: 4px;
+        height: 60px;
+        padding: 0 15px;
+    }
+    &__btn{
+        width: 100%;
+        display: block;
+        background-color: $title;
+        @extend %roboto-400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 14px 0;
+        border: none;
+        cursor: pointer;
+    }
+    &__error{
+        margin-top: 12px;
+        color: $accent;
+        display: inline-block;
     }
 }
 
