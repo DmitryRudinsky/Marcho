@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header header--404-page">
         <div class="container">
             <div class="header__inner">
                 <a class="logo" href="#">
@@ -52,59 +52,21 @@
                         <span class="user-nav__num">7</span>
                     </a>
                 </div>
-
             </div>
         </div>
     </header>
 
     <main class="main">
-        <section class="top">
-            <div class="top__container" style="background-image: url('images/top__bg.jpg');">
-                <div class="container">
-                    <h2 class="top__title title">
-                        LOG IN
-                    </h2>
-                    <div class="breadcrumbs">
-                        <ul class="breadcrumbs__list">
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="index.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="login.html">
-                                    Log in 
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="modal">
+        <section class="page-404">
             <div class="container">
-                <div class="modal__links">
-                    <a class="modal__link" href="register.html">REGISTER</a>
-                    <a class="modal__link modal__link--active" href="login.html">LOGIN</a>
+                <div class="page-404__inner">
+                    <div class="page-404__content">
+                        <h2 class="page-404__title">OPPS! Page Not Found!!</h2>
+                        <p class="page-404__text">We,re sorry but we can’t seem to find the pages you request. This might be because you have typed the web address not find incorrectly.</p>
+                        <a class="page-404__link" href="#">BACK TO HOME</a>
+                    </div>
+                    <img class="page-404__img" src="images/content/404/error.png" alt="" >
                 </div>
-                <form class="modal__" action="#">
-                    <label class="modal__label">
-                        Username or email address*
-                        <input class="modal__input" type="text" required>
-                    </label>
-                    <label class="modal__label">
-                        Password*
-                        <input class="modal__input" type="password" required>
-                    </label>
-
-                    <label class="modal__label">
-                        <input type="checkbox">
-                        Remember me
-                    </label>
-                    <button class="modal__btn" type="submit">LOG IN</button>
-                </form>
-                <a class="modal__error" href="#">Lost your password?</a>
             </div>
         </section>
     </main>

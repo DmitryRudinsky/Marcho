@@ -714,7 +714,36 @@
         color: $accent;
         display: inline-block;
     }
+    &__text{
+        margin-bottom: 25px;
+    }
 }
 
+.page-404{
+    padding: 110px 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        max-width: 570px;
+        width: 100%;
+    }
+    &__title{
+        @extend %roboto-700;
+        margin-bottom: 40px;
+        color: #28384f;
+        font-size: 48px;
+    }
+    &__text{
+        margin-bottom: 55px;
+        max-width: 470px;
+    }
+    &__link{
+        @extend %btn;
+        padding: 14px 35px;
+    }
+}
   
 @import 'media'; 
