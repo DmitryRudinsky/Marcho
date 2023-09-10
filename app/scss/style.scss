@@ -1228,6 +1228,11 @@
     left: 15px;
 }
 
+.jq-selectbox__dropdown ul{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(236, 236, 236);
+}
+
 
 .product-info{
     &__list{
@@ -1516,6 +1521,24 @@
     &__btn{
         @extend %btn;
         border: none;
+    }
+}
+
+.related{
+    padding: 50px 0 120px;
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px; 
+        .products-item__img-box{
+            height: auto;
+        }
+        .products-item__title{
+            padding: 5px 0;
+        }
     }
 }
 
