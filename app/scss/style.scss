@@ -1118,6 +1118,408 @@
     background-image: url(../images/icons/angle_down.svg)
 }
 
+.product-page{
+    padding: 120px 0 60px;
+    border-bottom: 1px solid #f0f0f0;
+}
 
+.product-item{
+    &__inner{
+        display: flex;
+    }
+    &__slide{
+        width: 730px;
+        margin-right: 70px;
+    }
+    &__content{
+        width: 370px;
+    }
+    &__title{
+        margin-bottom: 20px;
+        color: $title;
+        font-size: 20px;
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    &__price{
+        display: flex;
+    }
+    &__price-new{
+        font-size: 18px;
+        color: $title;
+    }
+    &__price-old{
+        padding-left: 15px;
+        text-decoration: line-through;
+    }
+    &__star{
+        display: flex;
+        align-items: center;
+        span{
+            padding-left: 8px;
+            color: $title;
+        }
+    }
+    &__text{
+        margin-bottom: 30px;
+        span{
+            display: block;
+            color: $title;
+            @extend %roboto-400;
+            font-size: 18px;
+        }
+    }
+    &__num{
+
+    }
+    &__btn{
+        @extend %btn;
+        border: none;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    &__info{
+        display: flex;
+    }
+}
+
+.jq-number__field{
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    border-bottom-color: #f0f0f0;
+    border-radius: 0; 
+    box-shadow: none;
+    transform: translateY(1px);
+}
+
+.jq-number__field input{
+    width: 114px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: none;
+    color: $title;
+    @extend %quicksand-500;
+    text-align: center;
+}
+
+.jq-number{
+    padding: 0;
+}
+
+.jq-number__spin {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 32px;
+    height: 14px;
+    border: none;
+    border-bottom-color: none;
+    border-radius: 0;
+    box-shadow: none;
+    user-select: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.jq-number__spin .minus{
+    right: auto;
+    left: 15px;
+}
+
+
+.product-info{
+    &__list{
+        margin-bottom: 25px;
+    }
+    &__item{
+        margin-bottom: 5px;
+        display: flex;
+    }
+    &__title{
+        min-width: 100px;
+        color: $title;
+    }
+    &__text{
+        a{
+            text-decoration: none;
+            margin-right: 6px;
+        }
+        a + a{
+            margin-left: 6px;
+        }   
+    }
+    &__link{
+        transition: all .3s;
+        path{
+            fill: $default;
+        }
+        & + .product-info__link{
+            margin-left: 15px;
+        }
+        &:hover{
+            path{
+                fill: $accent;
+            }
+        }
+    }
+}
+
+.product-slide{
+    display: flex;
+    .slick-vertical .slick-slide {
+        height: 140px;
+        margin-bottom: 30px;
+    }
+    &__thumb{
+        width: 140px;
+        margin-right: 30px;
+    }
+    &__thumb-item{
+        width: 140px;
+        height: 140px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        img{
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+        }
+    }
+    &__big{
+        width: 560px;
+        img{
+            width: 560px;
+            height: 650px;
+            object-fit: cover
+        }
+    }
+}
+
+.product-filter{
+    &__color{
+    margin-bottom: 35px;
+    label{
+        margin-right: 10px;
+    }        
+    }
+    &__color-input{
+        @extend %radio-hidden;
+        &:checked{
+            & + .product-filter__color-checkbox{
+                border-color: $accent;
+            }
+        }
+    }
+    &__color-checkbox{
+        width: 24px;
+        height: 24px;
+        border: 1px solid #ccccce;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        span{
+            display: inline-block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 3px;
+            left: 3px;
+        }
+    }
+    &__color-title,
+    &__size-title{
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: $title;
+        @extend %roboto-400;
+    }
+    &__size{
+    margin-bottom: 35px;
+    label{
+        margin-right: 10px;
+    }
+    }
+    &__size-input{
+        @extend %radio-hidden;
+        &:checked{
+            & + .product-filter__size-checkbox{
+                border-color: $accent;
+            }
+        }
+    }
+    &__size-checkbox{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ececec;
+        display: inline-block;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+
+.product-tabs{
+    padding-top: 110px;
+    &__top{
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 40px;
+        @extend %roboto-400;
+        font-size: 22px
+    }
+    &__top-item{
+        display: inline-block;
+        margin-bottom: 10px;
+        & + .product-tabs__top-item{
+            margin-left: 55px;
+        }
+    }
+    &__top-item--active{
+        color: $accent;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $accent;
+        }
+    }
+    &__content-item{
+        display: none;
+        &.product-tabs__content-item--active{
+            display: block;
+        }
+    }
+}
+
+.comments{
+    margin-bottom: 40px;
+    display: flex;
+    &__img{
+        margin-right: 30px;
+        min-width: 71px;
+        height: 71px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    &__content-top{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    &__content-name{
+        color: $title;
+        margin-right: 13px;
+        @extend %roboto-400;
+    }
+    &__content-date{
+        padding-left: 13px;
+        border-left: 1px solid $default;
+    }
+    &__content-star{
+        margin-right: 0;
+        margin-left: auto;
+    }
+    &__content-text{
+        margin-bottom: 10px;
+    }
+    &__content-text{
+        margin-bottom: 10px;
+    }
+    &__content-reply{
+        display: inline-block;
+        padding-left: 25px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 15px;
+            height: 13px;
+            background-image: url(../images/icons/reply.svg)
+        }
+    }
+}
+
+.comments-form{
+    &__title{
+        font-size: 22px;
+        @extend %roboto-400;
+        line-height: 28px;
+        color: $title;
+        margin-bottom: 60px;
+        position: relative;
+        &::after{
+          content: '';  
+          position: absolute;
+          left: 0;
+          top: 40px;
+          width: 50px;
+          height: 2px;
+          background-color: $accent
+        }
+    }
+    &__inner{
+        margin-bottom: 30px;
+    }
+    &__subtitle{
+        @extend %quicksand-400;
+        color: $title;
+        margin-right: 55px;
+    }
+    &__label{
+        margin-right: 30px;
+    }
+    &__input{
+        // @extend %radio-hidden;
+        &:checked + .comments-form__radio{
+            path{
+                fill: #ffc35b;
+            }
+        }
+    }
+    &__radio{
+        cursor: pointer;
+        path{
+            fill: $default;
+        }
+    }
+    &__box-input{
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text-input{
+        max-width: 567px;
+        height: 50px;
+        width: 100%;
+        padding: 0 20px;
+        border: 1px solid #f0f0f0;
+    }
+    &__textarea{
+        border: 1px solid #f0f0f0;
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+        height: 225px;
+        resize: none;
+        margin-bottom: 40px; 
+    }
+    &__btn{
+        @extend %btn;
+        border: none;
+    }
+}
 
 @import 'media'; 
