@@ -1172,9 +1172,6 @@
             font-size: 18px;
         }
     }
-    &__num{
-
-    }
     &__btn{
         @extend %btn;
         border: none;
@@ -1482,7 +1479,7 @@
         margin-right: 30px;
     }
     &__input{
-        // @extend %radio-hidden;
+        @extend %radio-hidden;
         &:checked + .comments-form__radio{
             path{
                 fill: #ffc35b;
