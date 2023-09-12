@@ -1454,6 +1454,13 @@
             background-image: url(../images/icons/reply.svg)
         }
     }
+    &__title{
+        @extend %roboto-700;
+        margin-bottom: 25px;
+        color: $title;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
 }
 
 .comments-form{
@@ -1744,6 +1751,125 @@
             left: 0;
             top: 5px;
         }
+    }
+}
+
+.blog-one{
+    &__text{
+        border: 1px solid #ececec;
+        border-top: none;
+        padding: 30px;
+        margin-top: -1px;
+        h4{
+            color: $title;
+            font-size: 22px;
+            @extend %roboto-500;
+            margin: 25px 0;
+        }
+        p{
+            margin: 25px 0;
+        }
+        blockquote{
+            background-color: $bg;
+            border-left: 3px solid $accent;
+            color: $title;
+            @extend %roboto-400;
+            font-size: 22px;
+            margin: 25px 0;
+            padding: 35px;
+        }
+        .blog-one__left-img{
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+        .blog-one__right-img{
+            float: right;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+    }
+    &__info{
+        display: flex;
+        margin-bottom: 25px;
+    }
+    &__info-link{
+        margin-right: 30px;
+        padding-left: 28px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            background-image: url(../images/icons/calendar.svg);
+            top: 5px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__info-link--comment::before{
+        background-image: url(../images/icons/comment.svg);
+    }
+    &__info-link--author::before{
+        background-image: url(../images/icons/user-acc.svg)
+    }
+    &__form-title{
+        text-transform: uppercase;
+        margin: 35px 0 25px;
+        color: $title;
+        font-size: 24px;
+        @extend %roboto-700;
+    }
+    .comments-form{
+        border-bottom: none;
+    }
+    &__box{
+        margin: 25px 0 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__tags,
+    &__share{
+        span{
+            text-transform: uppercase;
+            color: $title;
+        }
+    }
+    &__tags{
+        a{
+            text-decoration: none;
+        }
+    }
+    &__share{
+        a{
+            margin-right: 12px;
+            &:hover{
+                path{
+                    fill: $accent;
+                }
+            }
+        }
+        path{
+            fill: $default;
+        }
+    }
+    &__author{
+        border-bottom: 1px solid #ececec;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        display: flex;
+    }
+    &__author-img{
+        width: 140px;
+        height: 140px;
+        margin-right: 30px;
+        object-fit: cover;
+    }
+    &__author-name{
+        margin-bottom: 24px;
+        font-size: 22px;
+        @extend %roboto-500;
+        color: $title;
     }
 }
 
