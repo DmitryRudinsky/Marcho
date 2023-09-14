@@ -1,0 +1,72 @@
+.top-slider{
+    background-image: url(../images/slider/top-slider-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $bg;
+    padding: 65px 0 45px;
+    &__container{
+         max-width: 1560px;
+    }
+    &__content{
+         padding-left: 175px;
+         padding-top: 125px;
+    }
+    &__item{
+         display: flex !important;
+         justify-content: space-between;
+    }
+    &__title{
+         max-width: 670px;
+         font-size: 58px;
+         line-height: 68px;
+         color: $title;
+         @extend %roboto-700;
+         margin-bottom: 35px;
+    }
+    &__text{
+     margin-bottom: 55px;
+     max-width: 470px;
+    }
+    &__link{
+     @extend %btn;
+     padding: 14px 36px;
+    }
+    .slick-dots{
+     display: flex;
+     justify-content: center;
+     margin-top: -70px;
+         li{
+             padding: 0 5px;
+             line-height: 0;
+             button{
+                 padding: 0;
+                 font-size: 0;
+                 border-radius: 50%;
+                 background-color: transparent;
+                 width: 26px;
+                 height: 26px;
+                 border: 1px solid transparent;
+                 position: relative;
+                 &::before{
+                     content: '';
+                     position: absolute;
+                     width: 6px;
+                     height: 6px;
+                     border-radius: 50%;
+                     background-color: $default;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
+                 }
+             }
+             &.slick-active{
+                 button{
+                     border-color: $accent;
+                     &::before{
+                         background-color: $accent;
+                     }
+                 }
+             }
+         }
+    }
+ }

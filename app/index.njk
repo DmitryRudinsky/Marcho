@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body>
+
+    {% include 'app/module/_header/_header.html' %}
+
+
+    <main class="main">
+        {% include 'app/module/_top-slider/_top-slider.html' %}
+        {% include 'app/module/_categories-info/_categories-info.html' %}
+        {% include 'app/module/_video-fashion/_video-fashion.html' %}
+        {% include 'app/module/_products/_products.html' %}
+        {% include 'app/module/_promo/_promo.html' %}
+        {% include 'app/module/_partners/_partners.html' %}
+        {% include 'app/module/_index-blog/_index-blog.html' %}
+        
+        
+        
+    </main>
+
+    {% include 'app/module/_footer/_footer.html' %}
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>
