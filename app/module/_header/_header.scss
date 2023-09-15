@@ -4,10 +4,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 }
 
 .menu{
+    &__btn{
+        display: none;
+    }
     &__list{
         display: flex;
     }
@@ -53,5 +57,100 @@
         border-radius: 50%;
         line-height: 20px;
         text-align: center
+    }
+}
+
+@media (max-width: 1200px){
+    .header{
+        &__inner{
+            padding-right: 10px;
+        }
+    }
+}
+@media (max-width: 860px){
+    .menu{
+        margin-left: 40px;
+        order: 2;
+        &__list{
+            transform: translateY(-200%);
+            position: absolute;
+            top: 200px;
+            background-color: #fff;
+            width: 100%; 
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            z-index: 5;
+            transition: all .3s;
+            &.menu__list--active{
+                transform: translateY(0%);
+                transition: all .3s;
+            }
+        }
+        &__list-item + .menu__list-item{
+            padding-left: 15px;
+        }
+        &__list-item{
+            width: 100%;
+            padding: 0 15px;
+            text-align: center;
+        }
+        &__list-link{
+            padding: 12px 0;
+            display: block;
+        }
+        &__btn{
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        span{
+            width: 100%;
+            height: 3px;
+            background-color: $title;
+        }
+        &::after,
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: $title;
+        }
+        &::before{
+            top: 0;
+        }
+        &::after{
+            bottom: 0;
+        }
+    }   
+    }
+    .user-nav{
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 500px){
+    .header{
+        &__inner{
+            padding-right: 0;
+        }
+    }
+    .menu{
+        order: 0;
+        &__list{
+            top: 140px;
+        }
+    }
+    .user-nav{
+        width: 100%; 
+        margin-top: 35px;
+        justify-content: flex-end;   
+        padding-right: 15px;
     }
 }
