@@ -89,3 +89,65 @@
         background-image: url('../images/icons/time.svg')
     }
 }
+
+@media (max-width: 1230px){
+    .blog{
+        &__items{
+            &::after{
+                right: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .blog{
+        &__items{
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__item-box{
+            padding: 20px 15px;
+        }
+    }
+}
+
+@media (max-width: 1050px){
+    .blog{
+        &__items{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item{
+            max-width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .blog{
+        padding: 60px 0;
+        &__items{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .blog-box{
+        display: block;
+        &__date{
+            margin-top: 10px;
+        }
+    }
+    .blog{
+        &__item-imglink{
+            img{
+                height: 220px;
+            }
+        }
+    }
+}
