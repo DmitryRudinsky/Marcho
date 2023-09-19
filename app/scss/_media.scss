@@ -1,0 +1,125 @@
+@media (max-width: 1230px){
+    .page-404{
+        &__img{
+            width: 40%;
+        }
+    }
+    .person,
+    .latest-post{
+        display: none;
+    }
+    .blog-page{
+        .filter-category,
+        .filter-popular{
+            display: none;
+        }
+        &__inner{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+            margin-right: 0;
+        }
+        &__img,
+        &__image{
+            max-width: 100%;
+            width: 100%;
+        }
+        &__aside{
+            order: -1;
+            width: 100%;
+        }
+    }
+    .filter-search{
+        &__input{
+           width: 100%; 
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .page-404{
+        &__img{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 620px){
+    .blog-page{
+        padding: 60px 0;
+        &__item-box{
+            padding: 20px;
+        }
+        &__img{
+            height: 260px;
+        }
+    }
+    .blog-one{
+        &__text{
+            padding: 20px 10px;
+        }
+        &__info{
+            display: block;
+        }
+        &__info-item{
+            margin-bottom: 10px;
+        }
+        .comments-form{
+            padding-bottom: 0;
+        }
+        &__box{
+            flex-wrap: wrap;
+            padding-right: 10px;
+        }
+    }
+    .comments-form{
+        &__box-input{
+            display: block;
+        }
+        &__text-input{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .blog-one{
+        &__box{
+            display: block;
+        }
+        &__author-img{
+            display: none;
+        }
+        &__text{
+            blockquote{
+                padding: 10px;
+            }
+        }
+    }
+    .comments{
+        &__img{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .blog-page{
+        &__item-box{
+            padding: 10px 5px;
+        }
+        &__img{
+            height: 170px;
+        }
+        &__slider{
+            .slick-next{
+                right: 10px;
+            }
+            .slick-prev{
+                left: 10px;
+            }
+        }
+    }
+}
