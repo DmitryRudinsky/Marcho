@@ -52,8 +52,9 @@ a{
 .breadcrumbs{
     display: inline-flex;
     justify-content: center;
-    padding-left: 25px;
+    padding-left: 25px;flex-wrap: wrap;
     position: relative;
+
     &::before{
         position: absolute;
         content: '';

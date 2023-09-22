@@ -40,6 +40,9 @@
     &__inner{
         display: flex;
     }
+    &__filter-btn{
+        display: none;
+    }
     &__filters{
         width: 370px;
         margin-right: 30px;
@@ -332,7 +335,7 @@
     padding: 120px 0 0;
 }
 
-.product-item{
+.product-one{
     &__inner{
         display: flex;
     }

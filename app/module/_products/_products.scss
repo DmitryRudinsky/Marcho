@@ -4,7 +4,7 @@
     &__items{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 45px 30px;
+        gap: 45px 30px;
     }
     &__link{
         text-transform: uppercase;
@@ -207,7 +207,7 @@
     .products{
         &__items{
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 30px;
+            gap: 30px;
         }
     }
 }
@@ -217,7 +217,7 @@
         padding: 60px 0;
         &__items{
             grid-template-columns: repeat(1, 1fr);
-            grid-gap: 30px;
+            gap: 30px;
         }
     }
     .products-item {
